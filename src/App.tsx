@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Navbar } from "@/components/sections/Navbar";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { ReleaseSection } from "@/components/sections/ReleaseSection";
-import { LoreSection } from "@/components/sections/LoreSection";
-import { FactionsSection } from "@/components/sections/FactionsSection";
-import { SecretsSection } from "@/components/sections/SecretsSection";
-import { BettingSection } from "@/components/sections/BettingSection";
-import AdminPage from "@/pages/AdminPage";
+import { Navbar } from "./components/sections/Navbar";
+import { HeroSection } from "./components/sections/HeroSection";
+import { ReleaseSection } from "./components/sections/ReleaseSection";
+import { LoreSection } from "./components/sections/LoreSection";
+import { FactionsSection } from "./components/sections/FactionsSection";
+import { SecretsSection } from "./components/sections/SecretsSection";
+import { BettingSection } from "./components/sections/BettingSection";
+import AdminPage from "./pages/AdminPage";
 
 const HomePage = () => (
   <>

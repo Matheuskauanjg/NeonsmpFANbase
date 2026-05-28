@@ -1,5 +1,5 @@
 import { motion, HTMLMotionProps } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 import type { ButtonHTMLAttributes } from "react";
 
 interface NeonButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
