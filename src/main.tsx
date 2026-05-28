@@ -4,8 +4,11 @@ import App from './App.tsx'
 import './index.css'
 
 // Fonts
+// @ts-ignore
 import "@fontsource/orbitron";
+// @ts-ignore
 import "@fontsource/rajdhani";
+// @ts-ignore
 import "@fontsource/exo-2";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

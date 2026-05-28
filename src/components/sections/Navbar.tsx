@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
 import { MessageSquare as Discord, Menu, X } from "lucide-react";
 import { useState } from "react";
 

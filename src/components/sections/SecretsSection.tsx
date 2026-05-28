@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Send as Twitter, ExternalLink, FileText, Activity } from "lucide-react";
 
 export const SecretsSection = () => {

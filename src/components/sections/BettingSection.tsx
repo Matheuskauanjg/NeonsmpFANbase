@@ -256,12 +256,12 @@ export const BettingSection = () => {
 
                 <NeonButton 
                   variant="purple" 
-                  disabled={!betDate || totalPoints === 0 || !nickname}
+                  disabled={!betDate || totalPoints === 0 || !nickname || isSubmitting}
                   onClick={handleBet}
                   className="w-full md:w-auto h-16 px-12"
                 >
                   <Coins className="w-5 h-5" />
-                  Confirmar Aposta
+                  {isSubmitting ? "PROCESSANDO..." : "Confirmar Aposta"}
                 </NeonButton>
               </div>
             </NeonPanel>
@@ -272,7 +272,15 @@ export const BettingSection = () => {
   );
 };
 
-const ResourceInput = ({ label, points, value, onChange, color = "blue" }: any) => (
+interface ResourceInputProps {
+  label: string;
+  points: number;
+  value: number;
+  onChange: (v: number) => void;
+  color?: "blue" | "purple";
+}
+
+const ResourceInput = ({ label, points, value, onChange, color = "blue" }: ResourceInputProps) => (
   <div className="bg-white/5 border border-white/10 p-3 flex items-center justify-between group hover:border-white/20 transition-colors">
     <div className="flex flex-col">
       <span className="text-[10px] font-orbitron text-gray-400 uppercase tracking-widest">{label}</span>

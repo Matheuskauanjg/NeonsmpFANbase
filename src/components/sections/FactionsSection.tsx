@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { NeonPanel } from "../ui/NeonPanel";
 import { NeonButton } from "../ui/NeonButton";
 import { Building2, Trees, Zap, Skull } from "lucide-react";

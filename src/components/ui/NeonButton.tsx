@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
+import { motion, HTMLMotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { ButtonHTMLAttributes } from "react";
+import type { ButtonHTMLAttributes } from "react";
 
 interface NeonButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "blue" | "purple";
@@ -21,12 +21,17 @@ export const NeonButton = ({
     purple: "border border-neon-purple text-neon-purple hover:bg-neon-purple/10 hover:shadow-[0_0_20px_rgba(157,77,255,0.4)]",
   };
 
+  // Separar as props que vão para o motion.button
+  const motionProps: HTMLMotionProps<"button"> = {
+    whileHover: { scale: 1.05 },
+    whileTap: { scale: 0.95 },
+  };
+
   return (
     <motion.button
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+      {...motionProps}
       className={cn(baseStyles, variants[variant], glitch && "hover:animate-glitch", className)}
-      {...props}
+      {...(props as any)}
     >
       <span className="relative z-10 flex items-center gap-2">
         {children}

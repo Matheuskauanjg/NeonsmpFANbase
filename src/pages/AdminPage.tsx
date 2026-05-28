@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { ShieldAlert, Trophy, Users, Settings, RefreshCcw } from "lucide-react";
 import { NeonPanel } from "../components/ui/NeonPanel";
 import { NeonButton } from "../components/ui/NeonButton";
